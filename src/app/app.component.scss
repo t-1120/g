@@ -1,0 +1,121 @@
+$maincolor: rgb(255, 60, 76);
+$bar: rgb(255, 60, 76);
+$menu_font: #fff;
+$push_font_color: rgb(255, 111, 123);
+$color: #000; /* black */
+.menu_space {
+  transition: transform 0.2s ease;
+  background-color: $bar;
+  width: 200px;
+  height: 1000px;
+  position: fixed;
+  margin: {
+    top: -10px;
+    left: -10px;
+  }
+}
+
+.menu_table {
+  margin: auto;
+}
+.menu_button {
+  transition: 0.2s;
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 10% 0%;
+  color: $menu_font;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font: {
+    size: 30px;
+    family: "impact", "ヒラギノ角ゴ ProN W3", sans-serif;
+  }
+  user-select: none; /* CSS3 */
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari、Chromeなど */
+  -ms-user-select: none; /* IE10かららしい */
+}
+.menu_button:hover {
+  color: $push_font_color;
+}
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 481px) {
+  //ここからPC用のSCSSを書く
+  .plusbtn {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  //ここからスマホ用のSCSSを書く
+  .menu_space,
+  .main_space_td {
+    display: none;
+  }
+  .plusbtn {
+    position: fixed;
+    margin: 10px 400px;
+    label {
+      &:before {
+        display: inline-block;
+        content: "+";
+        color: $color;
+        font: {
+          size: 50px;
+          family: "impact", "ヒラギノ角ゴ ProN W3", sans-serif;
+        }
+        transition: transform 0.2s ease;
+      }
+    }
+    .none:checked + label:before {
+      color: $color;
+      transform: rotate(45deg);
+      transform-origin: center center;
+    }
+  }
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+#menu {
+  position: fixed;
+  top: 0;
+  left: -340px;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  transition: left 0.5s, right 0.5s;
+  background-color: rgb(0, 0, 0);
+}
+.toggle {
+  font-size: 50px;
+  cursor: pointer;
+}
+.toggle:hover {
+  text-decoration: underline;
+}
+#open {
+  display: none;
+}
+#open:checked + #menu {
+  left: 0;
+}
+.main_space_td {
+  min-width: 180px;
+  width: 180px;
+}
+.main_contents_td {
+  height: 900px;
+  vertical-align: top;
+}

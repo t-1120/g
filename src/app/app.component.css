@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* black */
+.menu_space {
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  background-color: #ff3c4c;
+  width: 200px;
+  height: 1000px;
+  position: fixed;
+  margin-top: -10px;
+  margin-left: -10px;
+}
+
+.menu_table {
+  margin: auto;
+}
+
+.menu_button {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 10% 0%;
+  color: #fff;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 30px;
+  font-family: "impact", "ヒラギノ角ゴ ProN W3", sans-serif;
+  user-select: none;
+  /* CSS3 */
+  -moz-user-select: none;
+  /* Firefox */
+  -webkit-user-select: none;
+  /* Safari、Chromeなど */
+  -ms-user-select: none;
+  /* IE10かららしい */
+}
+
+.menu_button:hover {
+  color: #ff6f7b;
+}
+
+.none {
+  display: none;
+}
+
+@media screen and (min-width: 481px) {
+  .plusbtn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu_space,
+  .main_space_td {
+    display: none;
+  }
+  .plusbtn {
+    position: fixed;
+    margin: 10px 400px;
+  }
+  .plusbtn label:before {
+    display: inline-block;
+    content: "+";
+    color: #000;
+    font-size: 50px;
+    font-family: "impact", "ヒラギノ角ゴ ProN W3", sans-serif;
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+  }
+  .plusbtn .none:checked + label:before {
+    color: #000;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: -340px;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  -webkit-transition: left 0.5s, right 0.5s;
+  transition: left 0.5s, right 0.5s;
+  background-color: black;
+}
+
+.toggle {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.toggle:hover {
+  text-decoration: underline;
+}
+
+#open {
+  display: none;
+}
+
+#open:checked + #menu {
+  left: 0;
+}
+
+.main_space_td {
+  min-width: 180px;
+  width: 180px;
+}
+
+.main_contents_td {
+  height: 900px;
+  vertical-align: top;
+}
+/*# sourceMappingURL=app.component.css.map */

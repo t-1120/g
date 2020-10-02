@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: rgb(245, 245, 245);
+}
+@media screen and (min-width: 481px) {
+  //ここからPC用のSCSSを書く
+}
+@media screen and (max-width: 480px) {
+  //ここからスマホ用のSCSSを書く
+  .menu_space {
+    margin: {
+      left: -300px;
+    }
+  }
+}

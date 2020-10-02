@@ -1,0 +1,34 @@
+<div>
+  <table border="1" class="slide_image">
+    <tr>
+      <td><img src="" alt="" /></td>
+    </tr>
+  </table>
+</div>
+<table class="top_table" border="1">
+  <tr class="top_tr">
+    <td class="top_td"></td>
+    <td class="setumei">
+      <p class="top_name">ここら辺に</p>
+      <p class="top_info">
+        なんか説明がはいるんじゃないか<br />
+        そんなに気にしなくて良いと思うけど、<br />
+        CSSもいじってくれよな☆
+      </p>
+    </td>
+  </tr>
+</table>
+
+<div class="space"></div>
+
+<table border="1" class="circle_info">
+  <tr>
+    <td colspan="2" class="circle_title">
+      <div class="title-border">これ</div>
+    </td>
+  </tr>
+  <tr *ngFor="let item of CircleInfoArr">
+    <td class="circle_info_date">{{ item.date }}</td>
+    <td class="circle_info_info">{{ item.info }}</td>
+  </tr>
+</table>

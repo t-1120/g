@@ -1,0 +1,92 @@
+$maincolor: rgb(255, 60, 76);
+.top_td {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(236, 255, 67);
+}
+.top_table {
+  margin: auto;
+}
+.slide_image {
+  background-color: $maincolor;
+  width: 1200px;
+  height: 500px;
+}
+.setumei {
+  width: 500px;
+}
+//ここから文字の横に線を引くCSS
+.title-border {
+  display: flex;
+  align-items: center;
+}
+.title-border:before,
+.title-border:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+.title-border:before {
+  margin-right: 1rem;
+}
+.title-border:after {
+  margin-left: 1rem;
+}
+.title-border {
+  display: flex;
+  align-items: center;
+}
+.title-border:before,
+.title-border:after {
+  border-top: 1px solid;
+  content: "";
+  flex-grow: 1;
+}
+.title-border:before {
+  margin-right: 1rem;
+}
+.title-border:after {
+  margin-left: 1rem;
+}
+
+//ここまでが線を横にひくCSS
+.circle_info {
+  margin: auto;
+}
+
+@media screen and (min-width: 481px) {
+  //ここからPC用のSCSSを書く
+  .space {
+    height: 50px;
+  }
+  .circle_title {
+    width: auto;
+  }
+  .circle_info_date {
+    width: 100px;
+  }
+  .circle_info_info {
+    width: 300px;
+  }
+  .circle_info_date,
+  .circle_info_info {
+    font: {
+      size: 18px;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  //ここからスマホ用のSCSSを書く
+  .space {
+    height: 50px;
+  }
+  .circle_title {
+    width: auto;
+  }
+  .circle_info_date {
+    width: 100px;
+  }
+  .circle_info_info {
+    width: 300px;
+  }
+}
